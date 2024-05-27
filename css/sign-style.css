@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #feffff;
+    --second-bg-color: #def2f1;
+    --third-bg-color: #0f1e25;
+    --font-color: #0b0c10;
+    --main-color: #53e100;
+    --secondary-color: #46a302;
+    --link-color: #551a8b;
+    --bg-image: url('/res/mt-bg.png');
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-image: var(--bg-image);
+    background-size: cover;
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-popup {
+    width: 100vw;
+    min-height: 100vh;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 27.5rem;
+    height: 30rem;
+    border-radius: 1.25rem;
+    background: var(--bg-color);
+    box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.wrapper.active {
+    height: 37rem;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 2.5rem;
+}
+
+.wrapper .form-box.login {
+    transition: .5s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-30rem);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(30rem);
+}
+
+.wrapper.active .form-box.register {
+    transition: .5s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--bg-color);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--font-color);
+    border-bottom-left-radius: 1.25rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2rem;
+    color: var(--font-color);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    border-bottom: 0.125rem solid var(--font-color);
+    margin: 1.8rem 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--font-color);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .2s ease;
+}
+
+.input-box input:focus~label, 
+.input-box input:valid~label {
+    top: -0.3rem;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+}
+
+.remember-forgot {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: -1rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: var(--font-color);
+    margin-right: 0.2rem;
+}
+
+.remember-forgot a {
+    position: relative;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.remember-forgot a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.3rem;
+    width: 100%;
+    height: .2rem;
+    background: var(--link-color);
+    border-radius: 0.3rem;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+}
+
+.remember-forgot a:hover::after {
+    transform: scaleX(1);
+}
+
+.remember-forgot a:hover,
+.remember-forgot a:active {
+    color: var(--link-color);
+}
+
+.btn {
+    width: 100%;
+    height: 2.8rem;
+    background: var(--font-color);
+    border: 0.2rem solid var(--font-color);
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--bg-color);
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.login-register {
+    font-size: .9rem;
+    font-weight: 500;
+    margin: 1rem 0 0.8rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-register a{
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.login-register a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -.3rem;
+    width: 100%;
+    height: .2rem;
+    background: var(--link-color);
+    border-radius: 0.3rem;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+}
+
+.login-register a:hover::after {
+    transform: scaleX(1);
+}
+
+.login-register a:hover,
+.login-register a:active {
+    color: var(--link-color);
+}

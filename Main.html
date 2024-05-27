@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="res/icon.GeekHub.png" type="image/x-icon">
+        <title>GeekHub - Learning Java</title>
+        
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="css/loader.css" type="text/css">
+        <link rel="stylesheet" href="css/main-style.css" type="text/css">
+        <link rel="stylesheet" href="css/profile.main-style.css" type="text/css">
+        <link rel="stylesheet" href="css/create.main-style.css" type="text/css">
+        <link rel="stylesheet" href="css/settings.main-style.css" type="text/css">
+        <link rel="stylesheet" href="css/logout.main-style.css" type="text/css">
+        
+    </head>
+    <body>
+
+        <!-- Loader Start -->
+
+        <div class="container">
+            <div class="loading">
+                <span class="shape shape-1"></span>
+                <span class="shape shape-2"></span>
+                <span class="shape shape-3"></span>
+                <span class="shape shape-4"></span>
+            </div>
+            <p>Initializing<span class="multiple-dot">...</span></p>
+        </div>
+
+        <!-- Loader End -->
+
+        <!-- Navigation Bar Start -->
+
+        <div class="navigation">
+            <ul>
+                <li class="list" id="profile" onclick="show(0)">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-user'></i>
+                        </span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+
+                <li class="list" id="create" onclick="show(2)">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-layer-plus'></i>
+                        </span>
+                        <span class="text">Create</span>
+                    </a>
+                </li>
+
+                <li class="list active" id="learn" onclick="show(3)">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-book-bookmark'></i>
+                        </span>
+                        <span class="text">Learn</span>
+                    </a>
+                </li>
+                
+                <li class="list" id="settings" onclick="show(4)">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-cog'></i>
+                        </span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+                <li class="list" id="logout" onclick="show(5)">
+                    <a href="#">
+                        <span class="icon">
+                            <i class='bx bx-exit'></i>
+                        </span>
+                        <span class="text">Logout</span>
+                    </a>
+                </li>
+
+                <div class="indicator"></div>
+            </ul>
+        </div>
+        <div class="navigation-clone"></div>
+
+        <!-- Navigation Bar End -->
+
+        <!-- Main Start -->
+
+        <div class="main">
+        
+            <!-- Profile Section Start -->
+
+            <section class="profile tabs">
+                
+                <span class="main_bg">
+                    <div class="profile-container">
+
+                        <div class="header">
+                            <span><i class='bx bx-user' ></i> User Profile</span>
+                        </div>
+                        
+                        <section class="userProfile card">
+                            <div class="profile-img">
+                                <img src="res/profile.png" alt="profile" id="pfp">
+                                <input type="file" id="file">
+                                <label for="file" id="uploadBtn"><i class='bx bx-image-add'></i> Choose Photo</label>
+                            </div>
+                        </section>
+
+                        <section class="awards card">
+                            <div class="medals">
+                                <h1 class="heading">Achievements</h1>
+                                
+                                <div class="primary">
+                                    <h1>Java Guru</h1>
+                                    <span>Primary</span>
+                                    <p>Achieved high scores in comprehensive Java assessments <br>Completed an advanced-level project.</p>
+                                </div>
+
+                                <div class="secondary">
+                                    <h1>Syntax Sensei</h1>
+                                    <span>Secondary</span>
+                                    <p>Demonstrated a strong understanding of Java syntax <br>Master of writing clean, well-structured code.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="skills">
+
+                                <h1 class="heading">Skills</h1>
+                                <ul>
+                                    <li style="--i:0">Core Java</li>
+                                    <li style="--i:1">Java Collections</li>
+                                    <li style="--i:2">GUI Development</li>
+                                    <li style="--i:3">Database Connectivity</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="userDetails card">
+                            <div class="userName">
+                                <h1 class="name">Ehdrian Robles</h1>
+                                <div class="map">
+                                    <i class='bx bx-map-pin ri'></i>
+                                    <span>Kyoto, JP</span>
+                                </div>
+                                <p>Beginner Programmer</p>
+                            </div>
+                
+                            <div class="rank">
+                                <h1 class="heading">Rankings</h1>
+                                <span>8.6</span>
+                                <div class="rating">
+                                    <i class='bx bx-star rate'></i>
+                                    <i class='bx bx-star rate'></i>
+                                    <i class='bx bx-star rate'></i>
+                                    <i class='bx bx-star rate'></i>
+                                    <i class='bx bx-star rate underrate'></i>
+                                </div>
+                            </div>
+                
+                            <div class="btns">
+                                <ul>
+                                    <li class="sendMsg">
+                                        <i class='bx bxs-chat ri'></i>
+                                        <a href="Main.html">Send Message</a>
+                                    </li>
+                
+                                    <li class="sendMsg active">
+                                        <i class='bx bxs-user-check ri'></i>
+                                        <a href="Main.html">Contacts</a>
+                                    </li>
+                
+                                    <li class="sendMsg">
+                                        <i class='bx bx-error ri'></i>
+                                        <a href="Main.html">Report User</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="timeline_about card">
+                            <div class="tabs">
+                                <ul>
+                                    <li class="timeline">
+                                        <i class='bx bx-time ri'></i>>
+                                        <span>Timeline</span>
+                                    </li>
+                
+                                    <li class="about active">
+                                        <i class='bx bx-user-pin ri'></i>
+                                        <span>About</span>
+                                    </li>
+                                </ul>
+                            </div>
+                
+                            <div class="contact_Info">
+                                <h1 class="heading">Contact Information</h1>
+                                <ul style="list-style-type: none;">
+                                    <li class="phone">
+                                        <h1 class="label">Phone:</h1>
+                                        <span class="info">+11 234 567 890</span>
+                                    </li>
+                
+                                    <li class="address">
+                                        <h1 class="label">Address:</h1>
+                                        <span class="info">S34 E 65th Street <br> New York, NY 10651-78 156-187-60</span>
+                                    </li>
+                
+                                    <li class="email">
+                                        <h1 class="label">E-mail:</h1>
+                                        <span class="info">hello@rsmarquetech.com</span>
+                                    </li>
+                
+                                    <li class="site">
+                                        <h1 class="label">Site:</h1>
+                                        <span class="info">www.rsmarquetech.com</span>
+                                    </li>
+                                </ul>
+                            </div>
+                
+                            <div class="basic_info">
+                                <h1 class="heading">Basic Information</h1>
+                                <ul>
+                                    <li class="birthday">
+                                        <h1 class="label">Birthday:</h1>
+                                        <span class="info">Dec 25, 2000</span>
+                                    </li>
+                
+                                    <li class="sex">
+                                        <h1 class="label">Gender:</h1>
+                                        <span class="info">Male</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                    </div>
+                </span>
+            </section>
+
+            <!-- Profile Section End -->
+
+            <!-- Create Section Start -->
+
+            <section class="create tabs">
+                <h1>My Java Projects</h1>
+                <div class="project-container">
+                    <div class="project-box">
+                        <span title="Create New Project">
+                            <a href="Main.html">
+                                <i class='bx bx-plus'></i>
+                            </a>
+                        </span>
+                    </div>
+
+                    <div class="project-box" title="Tutorial">
+                        <a href="Main.html">
+                            <img src="/res/tutorial.png" alt="Tutorial">
+                            <div class="project-layer">
+                                <h2>Tutorial</h2>
+                                <p>Lorem ipsum dolor sit amet.</p>   
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Create Section End -->
+
+            <!-- Learn Section Start -->
+
+            <section class="learn tabs">
+                <h1>Learn</h1>
+                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque ut provident unde eligendi dolor dolorum pariatur blanditiis, odit quae perferendis!</p>
+            </section>
+
+            <!-- Learn Section End -->
+            
+            <!-- Settings Section Start -->
+
+            <section class="settings tabs">
+                <span class="main-bg">
+                    <div class="settings-container">
+                        <div class="settings-menu">
+                            <div class="settings-header">
+                                <h4>Change Settings</h4>                              
+                            </div>
+                            
+                            <hr>
+                            
+                            <a href="Main.html" class="settings-menu-link">
+                                <span>
+                                    <i class='bx bxs-user-circle'></i>
+                                </span>
+                                <p>Account</p>
+                                <span class="more">></span>
+                            </a>
+
+                            <a href="Main.html" class="settings-menu-link">
+                                <span>
+                                    <i class='bx bxs-bar-chart-square'></i>
+                                </span>
+                                <p>Progress</p>
+                                <span class="more">></span>
+                            </a>
+
+                            <a href="Main.html" class="settings-menu-link">
+                                <span>
+                                    <i class='bx bxs-universal-access'></i>
+                                </span>
+                                <p>Accessibility</p>
+                                <span class="more">></span>
+                            </a>
+
+                            <a href="Main.html" class="settings-menu-link">
+                                <span>
+                                    <i class='bx bxs-lock'></i>
+                                </span>
+                                <p>Privacy</p>
+                                <span class="more">></span>
+                            </a>
+
+                            <a href="Main.html" class="settings-menu-link">
+                                <span>
+                                    <i class='bx bxs-help-circle'></i>
+                                </span>
+                                <p>Help & Support</p>
+                                <span class="more">></span>
+                            </a>
+                        </div>
+                    </div>
+                </span>
+            </section>
+
+            <!-- Settings Section End -->
+
+            <!-- Log Out Section Start -->
+
+            <section class="signout tabs">
+                <div class="popup">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <span class="close-btn" onclick="defaultMain()">
+                            <i class='bx bx-x'></i>
+                        </span>
+                        <div class="confirm-box logout">
+                            <h2>Log Out</h2>
+                            <p>Are you sure you want to exit?</p>
+                            <button onclick="goBack()">Yes</button>
+                            <button onclick="defaultMain()">No</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Log Out Section End -->
+        
+        </div>
+        
+        <!-- Main End -->
+
+        <!-- Custom JS -->
+
+        <script src="js/main.js"></script>
+        
+    </body>
+</html>

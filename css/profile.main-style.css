@@ -1,0 +1,460 @@
+/* ===== =====>>  Body Main-Background Css  <<===== =====  */
+
+.main_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(var(--bg-color), var(--second-bg-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 38rem 0 52rem 0;
+}
+
+/* ===== =====>>  Main-Container Css  <<===== =====  */
+
+.profile-container {
+    top: 3rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "header header"
+        "userProfile userDetails"
+        "awards timeline_about"
+        "awards timeline_about";
+    width: 85vw;
+    height: fit-content;
+    background: var(--second-bg-color);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 0.5rem rgba(254, 255, 255, 0.6), 0 0 1.5rem rgba(11, 12, 16, 0.08);
+    gap: 1rem;
+}
+
+/* ===== =====>>  Container Cards Grid-Area Css Start  <<===== =====  */
+
+.header {
+    grid-area: header;
+}
+
+.userProfile {
+    grid-area: userProfile;
+}
+
+.awards {
+    grid-area: awards;
+}
+
+.userDetails {
+    grid-area: userDetails;
+}
+
+.timeline_about {
+    grid-area: timeline_about;
+}
+
+/* ===== =====>>  Container Cards Css  <<===== =====  */
+ 
+.profile-container .card {
+    box-shadow: 0 0 0.75rem rgba(11, 12, 16, 1);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(5rem);
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.01)
+    );
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== =====>>  Container Header Css  <<===== =====  */
+
+.profile-container .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: fit-content;
+}
+
+.profile-container .header span i {
+    font-size: 2rem;
+}
+
+.profile-container .header span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+}
+
+/* ===== =====>>  User Main-Profile Css Start  <<===== ===== */
+
+.profile-container .userProfile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.profile-container .userProfile .profile-img {
+    width: 13.5rem;
+    height: 13.5rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 2rem rgba(11, 12, 16, 1);
+    transform: scale(1);
+    border: 0;
+    transition: 0.5s ease;
+}
+
+.profile-container .userProfile .profile-img:hover {
+    border: 0.1rem solid var(--font-color);
+    transform: scale(1.25);
+}
+
+.profile-container .userProfile .profile-img #pfp {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: var(--font-color);
+}
+
+.profile-container .userProfile .profile-img #file {
+    display: none;
+}
+
+.profile-container .userProfile .profile-img #uploadBtn {
+    height: 4rem;
+    width: 100%;
+    font-size: 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(11, 12, 16, 0.7);
+    line-height: 3.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ===== =====>>  Achievements & Skills Css Start  <<===== ===== */
+
+.profile-container .awards {
+    padding: 1.5rem;
+
+}
+
+.awards .medals .heading,
+.awards .skills .heading {
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--font-color);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.awards .medals .heading::before,
+.awards .skills .heading::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0.1rem;
+    width: 100%;
+    background: var(--font-color);
+}
+
+.awards .medals .primary,
+.awards .medals .secondary {
+    position: relative;
+}
+
+.awards .medals .primary h1,
+.awards .medals .secondary h1 {
+    font-size: 1rem;
+    color: var(--font-color);
+    margin-bottom: 0.6rem;
+    text-align: left;
+}
+
+.awards .medals .primary span,
+.awards .medals .secondary span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--bg-color);
+    background: var(--main-color);
+    padding: 0.4rem 1rem;
+    border-radius: 0.4rem;
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.awards .medals .primary span:hover ,
+.awards .medals .secondary span:hover {
+    box-shadow: 0 0 0 0.5rem var(--secondary-color);
+    transform: scale(0.9);
+}
+
+.awards .medals .primary p,
+.awards .medals .secondary p {
+    margin-bottom: 1.8rem;
+    font-size: 0.8rem;
+    color: var(--font-color);
+    line-height: 1.6rem;
+    padding-right: 8.5rem;
+}
+
+.awards .skills ul li {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin: 0.5rem;
+    color: var(--font-color);
+    font-weight: 500;
+    list-style-type: none;
+}
+  
+.awards .skills ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 0.2rem;
+    background: var(--main-color);
+    animation: skills 8s linear infinite;
+    animation-delay: calc(-2s * var(--i));
+  }
+  
+  @keyframes skills {
+    0% {
+      width: 40%;
+      filter: hue-rotate(180deg);
+    }
+  
+    50% {
+      width: 0;
+    }
+  
+    100% {
+      width: 40%;
+      filter: hue-rotate(0);
+    }
+  }
+  
+/* ===== =====>>  User Details Css Start  <<===== ===== */
+
+.userDetails {
+    position: relative;
+    padding: 1.5rem 2.5rem;
+  }
+  
+  .userDetails .userName .name {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+  
+  .userDetails .userName .map {
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .userDetails .userName .map .ri {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .userDetails .userName .map span {
+    font-size: 1.1rem;
+    color: var(--font-color);
+    font-weight: 700;
+  }
+  
+  .userDetails .userName p {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 1.8rem;
+  }
+  
+  .userDetails .rank {
+    position: relative;
+    margin-bottom: 1.8rem;
+  }
+  
+  .userDetails .rank .heading {
+    font-size: 1rem;
+    color: var(--font-color);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    text-align: left;
+  }
+  
+  .userDetails .rank span {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .userDetails .rank .rating {
+    position: absolute;
+    top: 2.7rem;
+    left: 3.5rem;
+  }
+  
+  .userDetails .rank .rating .rate {
+    color: var(--main-color);
+    font-size: 1.4rem;
+  }
+  
+  .userDetails .rank .rating .underrate {
+    color: var(--font-color);
+  }
+  
+  .userDetails .btns ul,
+  .userDetails .btns ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .userDetails .btns ul li {
+    margin-right: 2.5rem;
+    border-radius: 0.5rem;
+    transition: 0.5s ease;
+  }
+  
+  .userDetails .btns ul li .ri {
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    transition: 0.3s ease;
+  }
+  
+  .userDetails .btns ul li a {
+    font-size: 1.4rem;
+    color: var(--font-color);
+    font-weight: 500;
+    transition: 0.5s ease;
+  }
+  
+  .userDetails .btns ul .active,
+  .userDetails .btns ul li:hover {
+    background: var(--main-color);
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .userDetails .btns ul .active a,
+  .userDetails .btns ul .active .ri,
+  .userDetails .btns ul li:hover,
+  .userDetails .btns ul li a:hover {
+    color: var(--bg-color);
+}
+
+/* ===== =====>>  Timeline & About Css Start  <<===== ===== */
+
+  .timeline_about {
+    padding: 2.5rem;
+  }
+  
+  .timeline_about .tabs ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .timeline_about .tabs ul::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--bg-color);
+  }
+  
+  .timeline_about .tabs ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 2.5rem;
+    padding-bottom: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .timeline_about .tabs ul li span {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  .timeline_about .tabs ul li .ri {
+    margin-right: 0.5rem;
+  }
+  
+  .timeline_about .tabs ul .active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--main-color);
+  }
+  
+  .timeline_about .contact_info .heading,
+  .timeline_about .basic_info .heading {
+    font-size: 1rem;
+    color: var(--font-color);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline_about .contact_info ul,
+  .timeline_about .basic_info ul {
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline_about .contact_info ul li,
+  .timeline_about .basic_info ul li {
+    display: flex;
+    margin: 0.5rem 0;
+  }
+  
+  .timeline_about .contact_info ul li h1,
+  .timeline_about .basic_info ul li h1 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    min-width: 12rem;
+  }
+  
+  .timeline_about .contact_info ul li span,
+  .timeline_about .basic_info ul li span {
+    font-size: 1.2rem;
+  }
+  
+  .timeline_about .contact_info ul .phone span,
+  .timeline_about .contact_info ul .email span,
+  .timeline_about .contact_info ul .site span {
+    color: var(--main-color);
+  }  

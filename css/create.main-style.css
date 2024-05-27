@@ -1,0 +1,118 @@
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 0 2.5rem 0 2.5rem;
+}
+
+.project-container .project-box:first-child {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.project-container .project-box:first-child span {
+    width: 4rem;
+    height: 4rem;
+    background: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+    font-size: 2rem;
+    transform: scale(1);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.project-container .project-box:first-child span:hover {
+    transform: scale(1.2);
+    font-size: 2.25rem;
+    background: var(--bg-color);
+    box-shadow: 0 0 0 5rem var(--secondary-color), 0 0 0 10rem var(--secondary-color), 0 0 0 15rem var(--secondary-color);
+}
+
+.project-container .project-box {
+    position: relative;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+    height: 30rem;
+    width: auto;
+    cursor: pointer;
+}
+
+.project-container .project-box:hover {
+    border: 0.25rem solid var(--main-color);
+    transform: scale(1.02);
+}
+
+.project-box a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.project-box h4 {
+    font-size: 2.5rem;
+}
+
+.project-box p {
+    font-size: 1rem;
+}
+
+.project-box img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: 0.5s ease;
+}
+
+.project-box:hover img {
+    transform: scale(1.2);
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 3rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.project-box:hover .project-layer {
+    transform: translateY(0);
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 1200px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {    
+    .project-container {
+        grid-template-columns: 1fr;
+        padding-bottom: 10rem;
+    }
+}

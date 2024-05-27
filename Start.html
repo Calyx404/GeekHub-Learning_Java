@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/res/icon.GeekHub.png" type="image/x-icon">
+    <title>GeekHub - Learning Java</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/start-style.css" type="text/css">
+    <link rel="stylesheet" href="css/btnLearnMore.css" type="text/css">
+    <link rel="stylesheet" href="css/iconTop.css" type="text/css">
+</head>
+
+<body>
+
+    <!-- Header   -->
+
+    <header class="header">
+
+        <a href="#" class="logo" title="Learn Java">
+            <span >Geek</span>Hub.
+        </a>
+
+        <i class='bx bx-menu-alt-right' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class="bx bx-moon" id="darkMode-icon" title="Dark Mode"></div>
+    </header>
+
+    <!-- Home Section -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>GeekHub</h1>
+            <h3>A Java-Learning App for <span class="multiple-text"></span></h3>
+            <p>Explore interactive tutorials, coding exercises, and a vibrant community to enhance your skills and connect with fellow enthusiasts. Let's start coding!</p>
+            <div class="social-media">
+                <a href="https://web.facebook.com/" target="_blank" title="Follow us on Facebook"><i class='bx bxl-meta'></i></a>
+                <a href="https://twitter.com/" target="_blank" title="Follow us on Twitter"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://instagram.com/" target="_blank" title="Follow us on Instagram"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.youtube.com/" target="_blank" title="Follow us on YouTube"><i class='bx bxl-youtube' ></i></a>
+            </div>
+                <button onclick="Sign()" class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Get Started</span>
+                </button>
+        </div>
+        
+        <div class="home-img">
+            <img src="/res/logo.GeekHub.png" alt="Logo">
+        </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="/res/logo.GeekHub.png" alt="Logo">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Us</span></h2>
+            <h3>A Java-Learning App for Geeks</h3>
+            <p>Our vision at GeekHub is to empower aspiring programmers and technology enthusiasts by providing a comprehensive and immersive platform for learning and mastering the Java programming language. We envision a dynamic online environment where individuals of all skill levels can access high-quality educational resources, engage in interactive coding exercises, collaborate with peers, and receive expert guidance. By combining a user-friendly interface with cutting-edge learning techniques, we aim to foster a community of confident and proficient Java developers who are equipped to thrive in the rapidly evolving world of software development.</p>
+            <a href="#">
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Learn More</span>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <img src="/res/service.bg.jpg" alt="Service">
+                <div class="service-layer">
+                    <a href="a" class="service-icon"><i class='bx bx-street-view'></i></a>
+                    <h4>Personalized Learning Paths</h4>
+                    <p>Set your goals as we tailor your learning experience.</p>
+                    <a href="#" class="btn-service">Learn More</a>    
+                </div>
+            </div>
+
+            <div class="services-box">
+                <img src="/res/service.bg.jpg" alt="Service">
+                <div class="service-layer">
+                    <a href="b" class="service-icon"><i class='bx bx-file-blank'></i></a>
+                    <h4>Tutorials and Documentation</h4>
+                    <p>Elevate your productivity with educational Java resources.</p>
+                    <a href="#" class="btn-service">Learn More</a>    
+                </div>
+            </div>
+
+            <div class="services-box">
+                <img src="/res/service.bg.jpg" alt="Service">
+                <div class="service-layer">
+                    <a href="c" class="service-icon"><i class='bx bx-edit-alt'></i></a>
+                    <h4>Interactive Coding Exercises</h4>
+                    <p>Gradually advance your skills by solving programming problems.</p>
+                    <a href="#" class="btn-service">Learn More</a>    
+                </div>
+            </div>
+
+            <div class="services-box">
+                <img src="/res/service.bg.jpg" alt="Service">
+                <div class="service-layer">
+                    <a href="d" class="service-icon"><i class='bx bxs-invader'></i></a>
+                    <h4>Gamification Elements</h4>
+                    <p>Badges, points, or levels to encourage user engagement and progress.</p>
+                    <a href="#" class="btn-service">Learn More</a>    
+                </div>
+            </div>
+
+            <div class="services-box">
+                <img src="/res/service.bg.jpg" alt="Service">
+                <div class="service-layer">
+                    <a href="e" class="service-icon"><i class='bx bx-code-alt'></i></a>
+                    <h4>Code Editor and Compiler</h4>
+                    <p>A built-in code editor with syntax highlighting and code debugging.</p>
+                    <a href="#" class="btn-service">Learn More</a>    
+                </div>
+            </div>
+
+            <div class="services-box">
+                <img src="/res/service.bg.jpg" alt="Service">
+                <div class="service-layer">
+                    <a href="f" class="service-icon"><i class='bx bx-target-lock'></i></a>
+                    <h4>Progress Tracking</h4>
+                    <p>Track your learning progress and identify areas for improvement.</p>
+                    <a href="#" class="btn-service">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-box">
+                <input type="tel" placeholder="Mobile Number" pattern="+63 [0-9]{3}--[0-9]{3}--[0-9]{4}" minlength="11" maxlength="12" required>
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="8" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+    
+    <!-- Footer Section -->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by <a href="#" class="text">TheGeeks</a> | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home">
+                <button>
+                    <div class="text">
+                        <span>Back</span>
+                        <span>to</span>
+                        <span>top</span>
+                    </div>
+                    <div class="clone">
+                        <span>Back</span>
+                        <span>to</span>
+                        <span>top</span>
+                    </div>
+                    <i class='bx bx-right-arrow-alt' ></i>
+                </button>
+            </a>
+        </div>
+    </footer>
+
+
+    <!-- Scroll Reveal -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed JS -->
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <!-- Custom JS -->
+    
+    <script src="js/start.js"></script>
+</body>
+
+</html>

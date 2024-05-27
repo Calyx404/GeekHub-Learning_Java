@@ -1,0 +1,112 @@
+.popup .overlay {
+    width: 100vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.popup .wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--font-color);
+    box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.5);
+    color: var(--bg-color);
+    width: 27.5rem;
+    height: 14rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.wrapper .confirm-box {
+    width: 100%;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.popup .close-btn i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--bg-color);
+    border-bottom-left-radius: 1.25rem;
+    color: var(--font-color);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.popup .close-btn i:hover {
+    font-size: 1.8rem;
+    text-shadow: 0 0 0.2rem var(--bg-color);
+}
+
+.confirm-box h2 {
+    font-size: 2rem;
+}
+
+.confirm-box p {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+
+.confirm-box button {
+    width: 5rem;
+    height: 2.8rem;
+    background: var(--bg-color);
+    outline: none;
+    margin: 0.5rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--font-color);
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+
+.confirm-box button:hover {
+    transform: scale(0.9);    
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 550px) {
+    .popup .wrapper {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .popup .wrapper {
+        width: 22rem;
+    }
+
+    .confirm-box h2 {
+        font-size: 1.5rem;
+    }
+    
+    .confirm-box p {
+        font-size: 1rem;
+    }
+
+    .confirm-box button {
+        margin: 1rem;
+    }
+}
